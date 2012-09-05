@@ -1,0 +1,80 @@
+public class testers.A extends java.lang.Object
+{
+    int result;
+    boolean flag;
+
+    public void DoOp(int, int)
+    {
+        testers.A this;
+        int a, b, temp$1, temp$2, temp$3;
+        boolean temp$0;
+
+        this := @this: testers.A;
+        a := @parameter0: int;
+        b := @parameter1: int;
+        temp$0 = this.<testers.A: boolean flag>;
+        if temp$0 == 0 goto label1;
+
+        goto label0;
+
+     label0:
+        nop;
+        temp$1 = a;
+        temp$2 = temp$1 + b;
+        this.<testers.A: int result> = temp$2;
+        goto label2;
+
+     label1:
+        nop;
+        temp$3 = a - b;
+        this.<testers.A: int result> = temp$3;
+
+     label2:
+        nop;
+        return;
+    }
+
+    public int getResult()
+    {
+        testers.A this;
+        int temp$0;
+
+        this := @this: testers.A;
+        temp$0 = this.<testers.A: int result>;
+        return temp$0;
+    }
+
+    public void setSumOp(boolean)
+    {
+        testers.A this;
+        boolean f;
+
+        this := @this: testers.A;
+        f := @parameter0: boolean;
+        this.<testers.A: boolean flag> = f;
+        return;
+    }
+
+    public int doubleit(int)
+    {
+        testers.A this;
+        int a, temp$0;
+
+        this := @this: testers.A;
+        a := @parameter0: int;
+        temp$0 = a * 2;
+        return temp$0;
+    }
+
+    public void <init>()
+    {
+        testers.A this;
+        boolean temp$0;
+
+        this := @this: testers.A;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        temp$0 = 0;
+        this.<testers.A: boolean flag> = temp$0;
+        return;
+    }
+}
