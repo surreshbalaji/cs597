@@ -15,6 +15,7 @@ public class RunExample {
 	public static void main(String[] args) {
 		//argslist to setup the analysis environment
 		System.out.println("surresh test");
+		System.out.println("see changes in github");
 		args = new String[] { "testers.Integration", "testers.A", "testers.B" };
 		//validation check for empty arguments to the program
 		if (args.length == 0) {
