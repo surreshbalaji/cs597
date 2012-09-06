@@ -19,27 +19,14 @@ import soot.toolkits.graph.UnitGraph;
 import soot.toolkits.scalar.ArraySparseSet;
 import soot.toolkits.scalar.FlowSet;
 import soot.toolkits.scalar.ForwardFlowAnalysis;
+import soot.toolkits.scalar.Pair;
 
 // Referenced classes of package soot.toolkits.scalar:
 //            BackwardFlowAnalysis, ArraySparseSet, FlowSet
 
 class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
 
-	FlowSet emptySet = new ArraySparseSet();
-	// LiveVariablesAnalysis lva;
-	/*
-	 * a map of variables tainted using df propagation by variables in
-	 * 
-	 * @variablesToTrack
-	 */
-	private HashMap<SootField, HashSet<Value>> dfTaintMap = new HashMap<SootField, HashSet<Value>>();
-
-	/*
-	 * a map of variables tainted using cf propagation by variables in
-	 * 
-	 * @variablesToTrack
-	 */
-	/* The set of the statements invoking methods */
+	FlowSet emptySet = new DataFlowSet();
 
 	@SuppressWarnings("unchecked")
 	MyInterProcedureAnalysis(UnitGraph g) {
@@ -49,8 +36,9 @@ class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
 		 * System.out.println("running livevariable analysis for the method");
 		 * lva = new LiveVariablesAnalysis(new
 		 * ExceptionalUnitGraph(g.getBody()));
-		 */doAnalysis(g);
-
+		 */
+		// doAnalysis(g);
+		doAnalysis();
 	}
 
 	public void doAnalysis(UnitGraph g) {
@@ -208,26 +196,71 @@ class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
 	}
 
 	/**
-	 * OUT is the same as IN plus the genSet.
+	 * OUT is the same as IN plus the TAINTLIST AT THIS STATEMENT
 	 **/
 	protected void flowThrough(Object inValue, Object unit, Object outValue) {
-		FlowSet in = (FlowSet) inValue, out = (FlowSet) outValue;
+		DataFlowSet in = (DataFlowSet) inValue;
+		DataFlowSet out = (DataFlowSet) outValue;
+		HashSet<Value> taintVar=new HashSet<Value>();
+		Pair<SootField, HashSet<Value>> taintMap=new Pair<SootField,HashSet<Value>>();
+		Stmt st = (Stmt) unit;
+	//	System.out.println("Current Statement " + st);
+//		System.out.println("hello" +in.toString());
+		// Copy out to in
+		in.copy(out);
+		// consider only the assignment statement
+		if (st instanceof AssignStmt) {
+			AssignStmt ast = (AssignStmt) st;
+			// checking whether the assignment statement contains fieldref
+			if (((AssignStmt) st).containsFieldRef()) {
+				// get live variables here
+				FieldRef fr = (FieldRef) ast.getFieldRef();
+				
 
-		// perform generation (kill set is empty)
-		// in.union(unitToGenerateSet.get(unit), out);
+				Iterator boxIt = st.getDefBoxes().iterator();
+				while (boxIt.hasNext()) {
+					final ValueBox box = (ValueBox) boxIt.next();
+					Value value = box.getValue();
+					if (value instanceof Local)
+						taintVar.add(value);
+				}
+
+				boxIt = st.getUseBoxes().iterator();
+				while (boxIt.hasNext()) {
+					final ValueBox box = (ValueBox) boxIt.next();
+					Value value = box.getValue();
+					//field ref
+					if (value.equals(fr))
+					{
+	//					System.out.println(st);
+	//					System.out.println("Field referenced" + fr.getField());
+						taintMap.setPair(fr.getField(), taintVar);
+						out.add(taintMap);
+						
+					}
+					//variables
+					
+					
+						
+				}
+			}
+
+		}
+		
+
 	}
 
 	/**
-	 * All paths == Intersection.
+	 * All paths == Union.
 	 **/
 	protected void merge(Object in1, Object in2, Object out) {
-		FlowSet inSet1 = (FlowSet) in1, inSet2 = (FlowSet) in2, outSet = (FlowSet) out;
+		DataFlowSet inSet1 = (DataFlowSet) in1, inSet2 = (DataFlowSet) in2, outSet = (DataFlowSet) out;
 
-		inSet1.intersection(inSet2, outSet);
+		inSet1.union(inSet2, outSet);
 	}
 
 	protected void copy(Object source, Object dest) {
-		FlowSet sourceSet = (FlowSet) source, destSet = (FlowSet) dest;
+		DataFlowSet sourceSet = (DataFlowSet) source, destSet = (DataFlowSet) dest;
 
 		sourceSet.copy(destSet);
 	}

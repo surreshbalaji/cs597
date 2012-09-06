@@ -3,7 +3,7 @@ package testers;
 public class B {
 
 	boolean flag= false;
-	int x=2;
+	int y=3;
 	public boolean getFlag()
 	{
 		int y=1;

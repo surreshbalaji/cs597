@@ -4,23 +4,31 @@ public class testers.Integration extends java.lang.Object
     public static void main(java.lang.String[])
     {
         java.lang.String[] args;
-        boolean x, y, z, temp$2, temp$3;
-        testers.A a, temp$0;
-        testers.B b, temp$1;
+        int a, b, c, d, e, temp$2, temp$3, temp$4, temp$5, temp$6, temp$7, temp$8, temp$9, temp$10;
+        testers.A a1, temp$0;
+        testers.B b1, temp$1;
 
         args := @parameter0: java.lang.String[];
         temp$0 = new testers.A;
         specialinvoke temp$0.<testers.A: void <init>()>();
-        a = temp$0;
+        a1 = temp$0;
         temp$1 = new testers.B;
         specialinvoke temp$1.<testers.B: void <init>()>();
-        b = temp$1;
-        temp$2 = 1;
-        a.<testers.A: boolean flag> = temp$2;
-        temp$3 = a.<testers.A: boolean flag>;
-        x = temp$3;
-        y = x;
-        b.<testers.B: boolean flag> = x;
+        b1 = temp$1;
+        temp$2 = a1.<testers.A: int x>;
+        a = temp$2;
+        temp$3 = b1.<testers.B: int y>;
+        temp$4 = temp$3 + 5;
+        b = temp$4;
+        temp$5 = a1.<testers.A: int x>;
+        temp$6 = temp$5 + 25;
+        d = temp$6;
+        temp$7 = b;
+        temp$8 = temp$7 + 10;
+        c = temp$8;
+        temp$9 = b1.<testers.B: int y>;
+        temp$10 = temp$9 + 20;
+        e = temp$10;
         return;
     }
 

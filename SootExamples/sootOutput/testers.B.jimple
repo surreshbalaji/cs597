@@ -1,7 +1,7 @@
 public class testers.B extends java.lang.Object
 {
     boolean flag;
-    int x;
+    int y;
 
     public boolean getFlag()
     {
@@ -46,8 +46,8 @@ public class testers.B extends java.lang.Object
         specialinvoke this.<java.lang.Object: void <init>()>();
         temp$0 = 0;
         this.<testers.B: boolean flag> = temp$0;
-        temp$1 = 2;
-        this.<testers.B: int x> = temp$1;
+        temp$1 = 3;
+        this.<testers.B: int y> = temp$1;
         return;
     }
 }

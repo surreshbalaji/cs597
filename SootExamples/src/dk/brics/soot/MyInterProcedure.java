@@ -4,9 +4,13 @@ package dk.brics.soot;
 
 import java.io.PrintStream;
 import java.util.*;
+
 import soot.*;
+import soot.jimple.Stmt;
 import soot.options.Options;
+import soot.tagkit.StringTag;
 import soot.toolkits.graph.UnitGraph;
+import soot.toolkits.scalar.FlowSet;
 
 // Referenced classes of package soot.toolkits.scalar:
 //            SimpleLiveLocalsAnalysis, FlowSet, LiveLocals
@@ -22,6 +26,16 @@ public class MyInterProcedure
         if(Options.v().verbose())
             G.v().out.println((new StringBuilder()).append("[").append(graph.getBody().getMethod().getName()).append("]     Constructing SimpleLiveLocals...").toString());
         MyInterProcedureAnalysis analysis = new MyInterProcedureAnalysis(graph);
+        Iterator sIt = graph.getBody().getUnits().iterator();
+        while( sIt.hasNext() ) {
+
+            Stmt s = (Stmt) sIt.next();
+            System.out.println(s); 
+            FlowSet ds = (FlowSet) analysis.getFlowAfter( s );
+            System.out.println(ds.toString());
+            System.out.println("---------------------------");
+            // Add StringTags listing live variables
+        } 
         /*if(Options.v().time())
             Timers.v().livePostTimer.start();
         unitToLocalsAfter = new HashMap(graph.size() * 2 + 1, 0.7F);

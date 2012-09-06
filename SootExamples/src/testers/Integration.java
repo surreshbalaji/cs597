@@ -3,15 +3,17 @@ package testers;
 public class Integration {
 public static void main(String args[])
 {
-	boolean x,y,z;
-	A a =new A();
-	B b=new B();
-	a.flag=true;
-	x=a.flag;
-	y=x;
-	b.flag=x;
-/*	a.setSumOp(b.getFlag());
-	a.DoOp(3, 2);*/
+	int a,b,c,d,e,f;
+	A a1 =new A();
+	B b1=new B();
+	a=a1.x;
+	b=b1.y+5;
+	d=a1.x+25;
+	c=b+10;
+	e=b1.y+20;
+	f=a1.x+78;
+	a1.setSumOp(b1.getFlag());
+	a1.DoOp(3, 2);
 	
 	/*int x,y,z;
 	x=10;

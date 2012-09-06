@@ -1,6 +1,7 @@
 public class testers.A extends java.lang.Object
 {
     int result;
+    int x;
     boolean flag;
 
     public void DoOp(int, int)
@@ -69,12 +70,15 @@ public class testers.A extends java.lang.Object
     public void <init>()
     {
         testers.A this;
-        boolean temp$0;
+        int temp$0;
+        boolean temp$1;
 
         this := @this: testers.A;
         specialinvoke this.<java.lang.Object: void <init>()>();
-        temp$0 = 0;
-        this.<testers.A: boolean flag> = temp$0;
+        temp$0 = 1;
+        this.<testers.A: int x> = temp$0;
+        temp$1 = 0;
+        this.<testers.A: boolean flag> = temp$1;
         return;
     }
 }
