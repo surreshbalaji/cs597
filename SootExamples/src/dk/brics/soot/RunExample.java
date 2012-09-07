@@ -30,8 +30,8 @@ public class RunExample {
 
 		}
 		//setting the first argument of argument list as the main class
-		SootClass sClass = Scene.v().loadClassAndSupport(args[1]);
-	//	Scene.v().setMainClass(sClass);
+		SootClass sClass = Scene.v().loadClassAndSupport(args[0]);
+		Scene.v().setMainClass(sClass);
 		//getting a list of methods in the main class
 		Iterator methodIt = sClass.getMethods().iterator();
 		//iterating through the statements

@@ -5,9 +5,11 @@ import java.util.*;
 
 import soot.*;
 import soot.jimple.AssignStmt;
+import soot.jimple.DefinitionStmt;
 import soot.jimple.FieldRef;
 import soot.jimple.InvokeExpr;
 import soot.jimple.InvokeStmt;
+import soot.jimple.Ref;
 import soot.jimple.ReturnStmt;
 import soot.jimple.SpecialInvokeExpr;
 import soot.jimple.Stmt;
@@ -27,7 +29,7 @@ import soot.toolkits.scalar.Pair;
 class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
 
 	FlowSet emptySet = new DataFlowSet();
-
+	HashSet<Value> fieldRefVar = new HashSet<Value>();
 	@SuppressWarnings("unchecked")
 	MyInterProcedureAnalysis(UnitGraph g) {
 		super(g);
@@ -201,52 +203,69 @@ class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
 	protected void flowThrough(Object inValue, Object unit, Object outValue) {
 		DataFlowSet in = (DataFlowSet) inValue;
 		DataFlowSet out = (DataFlowSet) outValue;
-		HashSet<Value> taintVar=new HashSet<Value>();
-		Pair<SootField, HashSet<Value>> taintMap=new Pair<SootField,HashSet<Value>>();
+		HashSet<Value> taintVar = new HashSet<Value>();
+		Pair<SootField, HashSet<Value>> taintMap = new Pair<SootField, HashSet<Value>>();
 		Stmt st = (Stmt) unit;
-	//	System.out.println("Current Statement " + st);
-//		System.out.println("hello" +in.toString());
+		// System.out.println("Current Statement " + st);
+		// System.out.println("hello" +in.toString());
 		// Copy out to in
 		in.copy(out);
 		// consider only the assignment statement
 		if (st instanceof AssignStmt) {
 			AssignStmt ast = (AssignStmt) st;
 			// checking whether the assignment statement contains fieldref
-			if (((AssignStmt) st).containsFieldRef()) {
-				// get live variables here
-				FieldRef fr = (FieldRef) ast.getFieldRef();
-				
 
-				Iterator boxIt = st.getDefBoxes().iterator();
-				while (boxIt.hasNext()) {
-					final ValueBox box = (ValueBox) boxIt.next();
-					Value value = box.getValue();
-					if (value instanceof Local)
-						taintVar.add(value);
-				}
+			Iterator boxIt = st.getDefBoxes().iterator();
+			while (boxIt.hasNext()) {
+				final ValueBox box = (ValueBox) boxIt.next();
+				Value value = box.getValue();
 
-				boxIt = st.getUseBoxes().iterator();
-				while (boxIt.hasNext()) {
-					final ValueBox box = (ValueBox) boxIt.next();
-					Value value = box.getValue();
-					//field ref
-					if (value.equals(fr))
-					{
-	//					System.out.println(st);
-	//					System.out.println("Field referenced" + fr.getField());
-						taintMap.setPair(fr.getField(), taintVar);
-						out.add(taintMap);
-						
-					}
-					//variables
-					
-					
-						
-				}
+				if (value instanceof Local)
+					taintVar.add(value);
 			}
 
+			boxIt = st.getUseBoxes().iterator();
+			while (boxIt.hasNext()) {
+				final ValueBox box = (ValueBox) boxIt.next();
+				Value value = box.getValue();
+				// field ref
+				if (ast.containsFieldRef()) {
+					// get live variables here
+					FieldRef fr = (FieldRef) ast.getFieldRef();
+
+					if (value.equals(fr)) {
+						// System.out.println(st);
+						// System.out.println("Field referenced" +
+						// fr.getField());
+						taintMap.setPair(fr.getField(), taintVar);
+						fieldRefVar.addAll(taintVar);
+						out.add(taintMap);
+
+					}
+				}
+				// fields referenced via temp var
+				System.out.println(value);
+				if (out.contains(value)) {
+
+					System.out.println("indirect reference");
+					HashSet<SootField> sf = out.updateTaintList(value);
+					for (SootField s : sf) {
+						HashSet<Value> currentList = out.getVars(s);
+						// remove this variable
+					if(fieldRefVar.contains(value))
+						{
+							System.out.println("removed");
+						currentList.remove(value);
+						}
+						// add the new tainted variable
+						currentList.addAll(taintVar);
+						taintMap.setPair(s, currentList);
+						out.add(taintMap);
+					}
+				}
+
+			}
 		}
-		
 
 	}
 

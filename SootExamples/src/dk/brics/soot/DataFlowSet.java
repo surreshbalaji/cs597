@@ -74,7 +74,8 @@ public class DataFlowSet extends AbstractFlowSet {
 		// TODO Auto-generated method stub
 		if (obj instanceof Value) {
 			for (SootField s : cntrlTaintFlow.keySet()) {
-				return cntrlTaintFlow.get(s).contains(obj);
+				if(cntrlTaintFlow.get(s).contains(obj))
+				 return true;
 			}
 
 		} else if (obj instanceof Pair) {
@@ -107,6 +108,15 @@ public class DataFlowSet extends AbstractFlowSet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+	}
+	
+	public void removeValue(Value val)
+	{
+		
+		for (SootField s : cntrlTaintFlow.keySet())
+		{
+			
+		}
 	}
 
 	@Override
@@ -172,6 +182,24 @@ public class DataFlowSet extends AbstractFlowSet {
 			vars.addAll(pair.getO2());
 		}
 		return vars;
+	}
+	
+	public HashSet<Value> getVars(SootField sf)
+	{
+		return cntrlTaintFlow.get(sf);
+	}
+	
+	public HashSet<SootField> updateTaintList(Value value)
+	{
+		HashSet<SootField> sf=new HashSet<SootField>();
+		for (SootField s : cntrlTaintFlow.keySet()) {
+			if(cntrlTaintFlow.get(s).contains(value))
+			{
+				//add the field;
+				sf.add(s);
+			}
+		}
+		return sf;
 	}
 
 	public void setCntrlTaintFlow(

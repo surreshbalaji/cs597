@@ -10,10 +10,11 @@ public static void main(String args[])
 	b=b1.y+5;
 	d=a1.x+25;
 	c=b+10;
+	b1.y=a1.x;
 	e=b1.y+20;
 	f=a1.x+78;
-	a1.setSumOp(b1.getFlag());
-	a1.DoOp(3, 2);
+	//a1.setSumOp(b1.getFlag());
+	//a1.DoOp(3, 2);
 	
 	/*int x,y,z;
 	x=10;
