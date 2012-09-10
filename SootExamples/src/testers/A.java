@@ -26,7 +26,8 @@ public class A {
 		int a,b,c;
 		a=x+5;
 		b=10;
-		c=x+15;
+		x=e+15;
+		result=x+9;
 	}
 
 	public int doubleit(int a) {

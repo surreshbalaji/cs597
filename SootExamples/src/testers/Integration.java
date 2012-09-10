@@ -24,7 +24,7 @@ public static void main(String args[])
 	c=d+10;
 	b1.y=c+29;
 		
-	a1.setSumOp(b1.flag,1,1);
+	a1.setSumOp(b1.flag,b1.getFlag(),1);
 	a1.DoOp(b1.y, 2);
 	
 	/*int x,y,z;

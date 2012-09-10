@@ -17,6 +17,7 @@ import soot.jimple.FieldRef;
 import soot.jimple.IdentityStmt;
 import soot.jimple.InvokeStmt;
 import soot.jimple.ParameterRef;
+import soot.jimple.ReturnStmt;
 import soot.jimple.ReturnVoidStmt;
 import soot.jimple.SpecialInvokeExpr;
 import soot.jimple.Stmt;
@@ -33,6 +34,7 @@ class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
 */
 	FlowSet emptySet = new DataFlowSet();
 	DataFlowSet methodFlowSet = new DataFlowSet();
+	Value methodReturnValue=null;
 	// HashSet<Value> fieldRefVar = new HashSet<Value>();
 	LoggerWrapper logWrap=LoggerWrapper.getInstance();
 	Logger logger=logWrap.getLogger();
@@ -226,7 +228,9 @@ class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
 	protected void flowThrough(Object inValue, Object unit, Object outValue) {
 		DataFlowSet in = (DataFlowSet) inValue;
 		DataFlowSet out = (DataFlowSet) outValue;
+		Value calleeReturnValue=null;
 		HashSet<Value> taintVar = new HashSet<Value>();
+		HashSet<Value> varUses=new HashSet<Value>();
 		Pair<SootField, HashSet<Value>> taintMap = new Pair<SootField, HashSet<Value>>();
 		Stmt st = (Stmt) unit;
 		logger.fine("Current Statement " + st);
@@ -288,10 +292,13 @@ class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
 			logger.fine("out flowset :" + out);
 			out.union(newAnalysis.getMethodFlowSet(), out);
 			logger.fine("After union : " + out.toString());
+			calleeReturnValue=newAnalysis.getMethodReturnValue();
+			
 		}
 		// consider only the assignment statement
 
 		if (st instanceof AssignStmt) {
+			logger.fine("assign check");
 			AssignStmt ast = (AssignStmt) st;
 			// get the defboxes
 			Iterator boxIt = st.getDefBoxes().iterator();
@@ -307,11 +314,22 @@ class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
 				// out.removeValue(value);
 
 			}
-			// get the useboxes and check whether it has fieldref
+			
 			boxIt = st.getUseBoxes().iterator();
 			while (boxIt.hasNext()) {
 				final ValueBox box = (ValueBox) boxIt.next();
-				Value value = box.getValue();
+				varUses.add(box.getValue());
+			}
+			
+			//add the return value to the use list if this 
+			//statement is a method invocation
+			if(containsMethodInvocation(st) && calleeReturnValue!=null)
+			{
+				logger.info("callee return value" + calleeReturnValue);
+				varUses.add(calleeReturnValue);
+			}
+			for(Value value:varUses)
+			{
 				// field ref
 				if (ast.containsFieldRef()) {
 					// check for fieldref
@@ -326,8 +344,10 @@ class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
 
 					}
 				}
+			
+				
 				// fields referenced via temp var
-				logger.fine(value.toString());
+				logger.fine("here we are" +value.toString());
 				if (out.contains(value)) {
 
 					logger.fine("indirect reference");
@@ -355,7 +375,15 @@ class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
 			out.copy(methodFlowSet);
 			logger.fine(out.toString());
 		}
-
+		
+		if(st instanceof ReturnStmt)
+		{
+			logger.fine("return value");
+			out.copy(methodFlowSet);
+			methodReturnValue=((ReturnStmt) st).getOp();
+			
+		}
+    logger.fine(out.toString());
 	}
 
 	/**
@@ -379,5 +407,10 @@ class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
 
 	public void setParamTrackList(HashMap<Integer, HashSet<SootField>> params) {
 		this.paramTrackList = params;
+	}
+	
+	public Value getMethodReturnValue()
+	{
+		return methodReturnValue;
 	}
 }

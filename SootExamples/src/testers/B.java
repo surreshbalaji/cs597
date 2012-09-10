@@ -4,9 +4,9 @@ public class B {
 
 	boolean flag= false;
 	int y=3;
-	public boolean getFlag()
+	public int getFlag()
 	{
-		int y=1;
+		
 		if(flag)
 		{
 			flag=false;
@@ -16,6 +16,7 @@ public class B {
 			flag=true;
 		}
 		y++;
-		return flag;
+		int x=y+5;
+		return x;
 	}
 }

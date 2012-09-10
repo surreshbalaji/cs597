@@ -1,404 +1,758 @@
-Sep 09, 2012 6:57:06 PM dk.brics.soot.RunExample main
-INFO: Sun Sep 09 18:57:06 CDT 2012
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedure <init>
+Sep 10, 2012 2:14:26 AM dk.brics.soot.RunExample main
+INFO: Mon Sep 10 02:14:26 CDT 2012
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedure <init>
 FINE: Starting interprocedure analysis
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis <init>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis <init>
 FINE: Method name: <init>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Current Statement r0 := @this: testers.Integration
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JIdentityStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement specialinvoke r0.<java.lang.Object: void <init>()>()
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Statement typeclass soot.jimple.internal.JInvokeStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement return
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Statement typeclass soot.jimple.internal.JReturnVoidStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: return here
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: 
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedure <init>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement specialinvoke r0.<java.lang.Object: void <init>()>()
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JInvokeStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: 
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement return
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JReturnVoidStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: return here
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: 
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: 
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedure <init>
 FINE: Starting interprocedure analysis
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis <init>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis <init>
 FINE: Method name: main
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Current Statement r0 := @parameter0: java.lang.String[]
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JIdentityStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Parameter referencer0
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Contains field params
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: 
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Current Statement $r1 = new testers.A
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: new testers.A
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arenew testers.A
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: 
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Current Statement specialinvoke $r1.<testers.A: void <init>()>()
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JInvokeStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: 
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Current Statement r2 = $r1
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: $r1
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are$r1
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: 
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Current Statement $r4 = new testers.B
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: new testers.B
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arenew testers.B
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: 
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Current Statement specialinvoke $r4.<testers.B: void <init>()>()
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JInvokeStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: 
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Current Statement r3 = $r4
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: $r4
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are$r4
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: 
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Current Statement r3.<testers.B: boolean flag> = 1
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r3
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: 1
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are1
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer3
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: 
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Current Statement i0 = r2.<testers.A: int x>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r2
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Field referenced<testers.A: int x>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r2.<testers.A: int x>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer2.<testers.A: int x>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer2
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Current Statement $i4 = r3.<testers.B: int y>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r3
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Field referenced<testers.B: int y>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r3.<testers.B: int y>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer3.<testers.B: int y>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer3
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i0]},{<testers.B: int y>->[$i4]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Current Statement i1 = $i4 + 5
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: $i4
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are5
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are$i4 + 5
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are$i4
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: indirect reference
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: 5
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: $i4 + 5
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i0]},{<testers.B: int y>->[i1, $i4]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Current Statement $i5 = r2.<testers.A: int x>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r2
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Field referenced<testers.A: int x>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r2.<testers.A: int x>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer2.<testers.A: int x>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer2
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i0, $i5]},{<testers.B: int y>->[i1, $i4]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Current Statement i2 = $i5 + 25
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: $i5
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are$i5 + 25
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are25
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are$i5
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: indirect reference
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: 25
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: $i5 + 25
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i2, i0, $i5]},{<testers.B: int y>->[i1, $i4]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Current Statement i3 = i2 + 10
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: i2
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arei2
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: indirect reference
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: 10
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: i2 + 10
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arei2 + 10
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are10
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i3, i2, i0, $i5]},{<testers.B: int y>->[i1, $i4]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Current Statement $i6 = i3 + 29
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: i3
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arei3
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: indirect reference
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: 29
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: i3 + 29
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arei3 + 29
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are29
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i3, i2, i0, $i5, $i6]},{<testers.B: int y>->[i1, $i4]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Current Statement r3.<testers.B: int y> = $i6
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r3
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: $i6
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer3
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are$i6
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: indirect reference
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i3, i2, r3.<testers.B: int y>, i0, $i5, $i6]},{<testers.B: int y>->[i1, $i4]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Current Statement $z0 = r3.<testers.B: boolean flag>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r3
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Field referenced<testers.B: boolean flag>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r3.<testers.B: boolean flag>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement virtualinvoke r2.<testers.A: void setSumOp(boolean,int,float)>($z0, 1, 1.0F)
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Statement typeclass soot.jimple.internal.JInvokeStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer3.<testers.B: boolean flag>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer3
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i3, i2, r3.<testers.B: int y>, i0, $i5, $i6]},{<testers.B: int y>->[i1, $i4]},{<testers.B: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement $i7 = virtualinvoke r3.<testers.B: int getFlag()>()
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Method invocation
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: caller out flowset :{<testers.A: int x>->[i3, i2, i0, $i5, r3.<testers.B: int y>, $i6]},{<testers.B: boolean flag>->[$z0]},{<testers.B: int y>->[i1, $i4]},
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement r0 := @this: testers.A
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: caller out flowset :{<testers.A: int x>->[i3, i2, r3.<testers.B: int y>, i0, $i5, $i6]},{<testers.B: int y>->[i1, $i4]},{<testers.B: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement r0 := @this: testers.B
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JIdentityStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement z0 := @parameter0: boolean
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Statement typeclass soot.jimple.internal.JIdentityStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Parameter referencez0
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Contains field params
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement i0 := @parameter1: int
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Statement typeclass soot.jimple.internal.JIdentityStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Parameter referencei0
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Contains field params
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement f0 := @parameter2: float
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Statement typeclass soot.jimple.internal.JIdentityStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Parameter referencef0
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Contains field params
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement r0.<testers.A: boolean flag> = z0
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: 
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement $z0 = r0.<testers.B: boolean flag>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r0
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: z0
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: indirect reference
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement $i4 = r0.<testers.A: int x>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r0
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Field referenced<testers.A: int x>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r0.<testers.A: int x>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement i1 = $i4 + 5
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: $i4
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: indirect reference
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: 5
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: $i4 + 5
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement b2 = 10
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: 10
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement $i5 = r0.<testers.A: int x>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r0
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Field referenced<testers.A: int x>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r0.<testers.A: int x>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement i3 = $i5 + 15
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: $i5
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: indirect reference
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: 15
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: $i5 + 15
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement return
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Statement typeclass soot.jimple.internal.JReturnVoidStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: return here
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: {<testers.A: int x>->[i1, i3, $i5, $i4]},{<testers.B: boolean flag>->[z0, r0.<testers.A: boolean flag>]},
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: method flowset :{<testers.A: int x>->[i1, i3, $i5, $i4]},{<testers.B: boolean flag>->[z0, r0.<testers.A: boolean flag>]},
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: out flowset :{<testers.A: int x>->[i3, i2, i0, $i5, r3.<testers.B: int y>, $i6]},{<testers.B: boolean flag>->[$z0]},{<testers.B: int y>->[i1, $i4]},
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: After union : {<testers.A: int x>->[i3, i2, i1, i3, i0, $i5, $i5, r3.<testers.B: int y>, $i6, $i4]},{<testers.B: boolean flag>->[$z0, z0, r0.<testers.A: boolean flag>]},{<testers.B: int y>->[i1, $i4]},
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement $i7 = r3.<testers.B: int y>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r3
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Field referenced<testers.B: int y>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r3.<testers.B: int y>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement virtualinvoke r2.<testers.A: void DoOp(int,int)>($i7, 2)
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Statement typeclass soot.jimple.internal.JInvokeStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Method invocation
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: caller out flowset :{<testers.A: int x>->[i3, i2, i1, i3, i0, $i5, $i5, r3.<testers.B: int y>, $i6, $i4]},{<testers.B: boolean flag>->[$z0, z0, r0.<testers.A: boolean flag>]},{<testers.B: int y>->[$i7, i1, $i4]},
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement r0 := @this: testers.A
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Statement typeclass soot.jimple.internal.JIdentityStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement i0 := @parameter0: int
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Statement typeclass soot.jimple.internal.JIdentityStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Parameter referencei0
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Contains field params
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement i1 := @parameter1: int
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Statement typeclass soot.jimple.internal.JIdentityStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Parameter referencei1
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Contains field params
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement $z0 = r0.<testers.A: boolean flag>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r0
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Field referenced<testers.A: boolean flag>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r0.<testers.A: boolean flag>
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement if $z0 == 0 goto $i3 = i0 - i1
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Field referenced<testers.B: boolean flag>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer0.<testers.B: boolean flag>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement if $z0 == 0 goto r0.<testers.B: boolean flag> = 1
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JIfStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement $i3 = i0 - i1
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement r0.<testers.B: boolean flag> = 1
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: i0
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: indirect reference
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: i1
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: i0 - i1
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement r0.<testers.A: int result> = $i3
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are1
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement r0.<testers.B: boolean flag> = 0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r0
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: $i3
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: indirect reference
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement $i2 = i0 + i1
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: i0
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: indirect reference
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: i1
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: i0 + i1
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement r0.<testers.A: int result> = $i2
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Statement typeclass soot.jimple.internal.JAssignStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: r0
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: $i2
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: indirect reference
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: Current Statement goto [?= return]
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement goto [?= $i1 = r0.<testers.B: int y>]
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JGotoStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement $i1 = r0.<testers.B: int y>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Field referenced<testers.B: int y>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer0.<testers.B: int y>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: int y>->[$i1]},{<testers.B: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement $i2 = $i1 + 1
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are1
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are$i1 + 1
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are$i1
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: indirect reference
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: int y>->[$i1, $i2]},{<testers.B: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement r0.<testers.B: int y> = $i2
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are$i2
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: indirect reference
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: int y>->[r0.<testers.B: int y>, $i1, $i2]},{<testers.B: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement $i3 = r0.<testers.B: int y>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Field referenced<testers.B: int y>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer0.<testers.B: int y>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: int y>->[r0.<testers.B: int y>, $i1, $i3, $i2]},{<testers.B: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement i0 = $i3 + 5
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are5
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are$i3 + 5
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are$i3
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: indirect reference
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: int y>->[i0, r0.<testers.B: int y>, $i1, $i3, $i2]},{<testers.B: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement return i0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JReturnStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: return value
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: int y>->[i0, r0.<testers.B: int y>, $i1, $i3, $i2]},{<testers.B: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: method flowset :{<testers.B: int y>->[i0, r0.<testers.B: int y>, $i1, $i3, $i2]},{<testers.B: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: out flowset :{<testers.A: int x>->[i3, i2, r3.<testers.B: int y>, i0, $i5, $i6]},{<testers.B: int y>->[i1, $i4]},{<testers.B: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: After union : {<testers.A: int x>->[i3, i2, r3.<testers.B: int y>, i0, $i5, $i6]},{<testers.B: int y>->[i0, i1, r0.<testers.B: int y>, $i1, $i4, $i3, $i2]},{<testers.B: boolean flag>->[$z0, $z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+INFO: callee return valuei0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arevirtualinvoke r3.<testers.B: int getFlag()>()
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arei0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: indirect reference
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer3
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i3, i2, r3.<testers.B: int y>, i0, $i5, $i6]},{<testers.B: int y>->[$i7, i0, i1, r0.<testers.B: int y>, $i1, $i4, $i3, $i2]},{<testers.B: boolean flag>->[$z0, $z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement virtualinvoke r2.<testers.A: void setSumOp(boolean,int,float)>($z0, $i7, 1.0F)
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JInvokeStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Method invocation
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: caller out flowset :{<testers.A: int x>->[i3, i2, r3.<testers.B: int y>, i0, $i5, $i6]},{<testers.B: int y>->[$i7, i0, i1, r0.<testers.B: int y>, $i1, $i4, $i3, $i2]},{<testers.B: boolean flag>->[$z0, $z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement r0 := @this: testers.A
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JIdentityStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: 
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement z0 := @parameter0: boolean
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JIdentityStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Parameter referencez0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Contains field params
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: boolean flag>->[z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement i0 := @parameter1: int
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JIdentityStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Parameter referencei0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Contains field params
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: int y>->[i0]},{<testers.B: boolean flag>->[z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement f0 := @parameter2: float
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JIdentityStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Parameter referencef0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Contains field params
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: int y>->[i0]},{<testers.B: boolean flag>->[z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement r0.<testers.A: boolean flag> = z0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arez0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: indirect reference
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: int y>->[i0]},{<testers.B: boolean flag>->[z0, r0.<testers.A: boolean flag>]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement $i3 = r0.<testers.A: int x>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Field referenced<testers.A: int x>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer0.<testers.A: int x>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[$i3]},{<testers.B: int y>->[i0]},{<testers.B: boolean flag>->[z0, r0.<testers.A: boolean flag>]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement i1 = $i3 + 5
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are5
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are$i3 + 5
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are$i3
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: indirect reference
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i1, $i3]},{<testers.B: int y>->[i0]},{<testers.B: boolean flag>->[z0, r0.<testers.A: boolean flag>]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement b2 = 10
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are10
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i1, $i3]},{<testers.B: int y>->[i0]},{<testers.B: boolean flag>->[z0, r0.<testers.A: boolean flag>]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement $i4 = i0 + 15
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arei0 + 15
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arei0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: indirect reference
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are15
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i1, $i3]},{<testers.B: int y>->[i0, $i4]},{<testers.B: boolean flag>->[z0, r0.<testers.A: boolean flag>]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement r0.<testers.A: int x> = $i4
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are$i4
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: indirect reference
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i1, $i3]},{<testers.B: int y>->[i0, $i4, r0.<testers.A: int x>]},{<testers.B: boolean flag>->[z0, r0.<testers.A: boolean flag>]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement $i5 = r0.<testers.A: int x>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Field referenced<testers.A: int x>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer0.<testers.A: int x>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i1, $i3, $i5]},{<testers.B: int y>->[i0, $i4, r0.<testers.A: int x>]},{<testers.B: boolean flag>->[z0, r0.<testers.A: boolean flag>]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement $i6 = $i5 + 9
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are9
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are$i5 + 9
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are$i5
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: indirect reference
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i1, $i6, $i3, $i5]},{<testers.B: int y>->[i0, $i4, r0.<testers.A: int x>]},{<testers.B: boolean flag>->[z0, r0.<testers.A: boolean flag>]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement r0.<testers.A: int result> = $i6
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are$i6
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: indirect reference
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i1, r0.<testers.A: int result>, $i6, $i3, $i5]},{<testers.B: int y>->[i0, $i4, r0.<testers.A: int x>]},{<testers.B: boolean flag>->[z0, r0.<testers.A: boolean flag>]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Current Statement return
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JReturnVoidStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: return here
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: {<testers.A: boolean flag>->[$z0]},{<testers.B: int y>->[r0.<testers.A: int result>, i0, $i3, $i2, r0.<testers.A: int result>]},
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: method flowset :{<testers.A: boolean flag>->[$z0]},{<testers.B: int y>->[r0.<testers.A: int result>, i0, $i3, r0.<testers.A: int result>, $i2]},
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: out flowset :{<testers.A: int x>->[i3, i2, i1, i3, i0, $i5, $i5, r3.<testers.B: int y>, $i6, $i4]},{<testers.B: boolean flag>->[$z0, z0, r0.<testers.A: boolean flag>]},{<testers.B: int y>->[$i7, i1, $i4]},
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: After union : {<testers.A: boolean flag>->[$z0]},{<testers.A: int x>->[i3, i2, i1, i3, i0, $i5, $i5, r3.<testers.B: int y>, $i6, $i4]},{<testers.B: boolean flag>->[$z0, z0, r0.<testers.A: boolean flag>]},{<testers.B: int y>->[$i7, r0.<testers.A: int result>, i0, i1, $i3, $i4, r0.<testers.A: int result>, $i2]},
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i1, r0.<testers.A: int result>, $i6, $i3, $i5]},{<testers.B: int y>->[i0, $i4, r0.<testers.A: int x>]},{<testers.B: boolean flag>->[z0, r0.<testers.A: boolean flag>]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i1, r0.<testers.A: int result>, $i6, $i3, $i5]},{<testers.B: int y>->[i0, $i4, r0.<testers.A: int x>]},{<testers.B: boolean flag>->[z0, r0.<testers.A: boolean flag>]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: method flowset :{<testers.A: int x>->[i1, r0.<testers.A: int result>, $i6, $i3, $i5]},{<testers.B: int y>->[i0, $i4, r0.<testers.A: int x>]},{<testers.B: boolean flag>->[z0, r0.<testers.A: boolean flag>]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: out flowset :{<testers.A: int x>->[i3, i2, r3.<testers.B: int y>, i0, $i5, $i6]},{<testers.B: int y>->[$i7, i0, i1, r0.<testers.B: int y>, $i1, $i4, $i3, $i2]},{<testers.B: boolean flag>->[$z0, $z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: After union : {<testers.A: int x>->[i3, i2, i1, r0.<testers.A: int result>, r3.<testers.B: int y>, i0, $i5, $i6, $i6, $i3, $i5]},{<testers.B: int y>->[$i7, i0, i1, i0, r0.<testers.B: int y>, $i1, $i4, $i4, $i3, $i2, r0.<testers.A: int x>]},{<testers.B: boolean flag>->[$z0, z0, r0.<testers.A: boolean flag>, $z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i3, i2, i1, r0.<testers.A: int result>, r3.<testers.B: int y>, i0, $i5, $i6, $i6, $i3, $i5]},{<testers.B: int y>->[$i7, i0, i1, i0, r0.<testers.B: int y>, $i1, $i4, $i4, $i3, $i2, r0.<testers.A: int x>]},{<testers.B: boolean flag>->[$z0, z0, r0.<testers.A: boolean flag>, $z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement $i8 = r3.<testers.B: int y>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Field referenced<testers.B: int y>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer3.<testers.B: int y>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer3
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i3, i2, i1, r0.<testers.A: int result>, r3.<testers.B: int y>, i0, $i5, $i6, $i6, $i3, $i5]},{<testers.B: int y>->[$i8, $i7, i0, i1, i0, r0.<testers.B: int y>, $i1, $i4, $i4, $i3, $i2, r0.<testers.A: int x>]},{<testers.B: boolean flag>->[$z0, z0, r0.<testers.A: boolean flag>, $z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement virtualinvoke r2.<testers.A: void DoOp(int,int)>($i8, 2)
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JInvokeStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Method invocation
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: caller out flowset :{<testers.A: int x>->[i3, i2, i1, r0.<testers.A: int result>, r3.<testers.B: int y>, i0, $i5, $i6, $i6, $i3, $i5]},{<testers.B: int y>->[$i8, $i7, i0, i1, i0, r0.<testers.B: int y>, $i1, $i4, $i4, $i3, $i2, r0.<testers.A: int x>]},{<testers.B: boolean flag>->[$z0, z0, r0.<testers.A: boolean flag>, $z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement r0 := @this: testers.A
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JIdentityStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: 
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement i0 := @parameter0: int
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JIdentityStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Parameter referencei0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Contains field params
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: int y>->[i0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement i1 := @parameter1: int
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JIdentityStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Parameter referencei1
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Contains field params
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: int y>->[i0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement $z0 = r0.<testers.A: boolean flag>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Field referenced<testers.A: boolean flag>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer0.<testers.A: boolean flag>
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: int y>->[i0]},{<testers.A: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement if $z0 == 0 goto $i3 = i0 - i1
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JIfStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: int y>->[i0]},{<testers.A: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement $i3 = i0 - i1
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arei0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: indirect reference
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arei1
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arei0 - i1
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: int y>->[i0, $i3]},{<testers.A: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement r0.<testers.A: int result> = $i3
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are$i3
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: indirect reference
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: int y>->[r0.<testers.A: int result>, i0, $i3]},{<testers.A: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement $i2 = i0 + i1
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arei0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: indirect reference
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arei1
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arei0 + i1
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: int y>->[i0, $i2]},{<testers.A: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement r0.<testers.A: int result> = $i2
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JAssignStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: assign check
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we arer0
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: here we are$i2
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: indirect reference
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: int y>->[i0, r0.<testers.A: int result>, $i2]},{<testers.A: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement goto [?= return]
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JGotoStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: int y>->[i0, r0.<testers.A: int result>, $i2]},{<testers.A: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Current Statement return
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: Statement typeclass soot.jimple.internal.JReturnVoidStmt
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
 FINE: return here
-Sep 09, 2012 6:57:08 PM dk.brics.soot.MyInterProcedureAnalysis flowThrough
-FINE: {<testers.A: boolean flag>->[$z0]},{<testers.A: int x>->[i3, i2, i1, i3, i0, $i5, $i5, r3.<testers.B: int y>, $i6, $i4]},{<testers.B: boolean flag>->[$z0, z0, r0.<testers.A: boolean flag>]},{<testers.B: int y>->[$i7, r0.<testers.A: int result>, i0, i1, $i3, $i4, r0.<testers.A: int result>, $i2]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: int y>->[r0.<testers.A: int result>, i0, r0.<testers.A: int result>, $i3, $i2]},{<testers.A: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.B: int y>->[r0.<testers.A: int result>, i0, r0.<testers.A: int result>, $i3, $i2]},{<testers.A: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: method flowset :{<testers.B: int y>->[r0.<testers.A: int result>, i0, r0.<testers.A: int result>, $i3, $i2]},{<testers.A: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: out flowset :{<testers.A: int x>->[i3, i2, i1, r0.<testers.A: int result>, r3.<testers.B: int y>, i0, $i5, $i6, $i6, $i3, $i5]},{<testers.B: int y>->[$i8, $i7, i0, i1, i0, r0.<testers.B: int y>, $i1, $i4, $i4, $i3, $i2, r0.<testers.A: int x>]},{<testers.B: boolean flag>->[$z0, z0, r0.<testers.A: boolean flag>, $z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: After union : {<testers.A: int x>->[i3, i2, i1, r0.<testers.A: int result>, r3.<testers.B: int y>, i0, $i5, $i6, $i6, $i3, $i5]},{<testers.B: int y>->[r0.<testers.A: int result>, $i4, $i3, $i8, r0.<testers.A: int result>, $i7, i0, i0, i1, i0, r0.<testers.B: int y>, $i4, $i3, $i1, $i2, r0.<testers.A: int x>, $i2]},{<testers.B: boolean flag>->[$z0, z0, r0.<testers.A: boolean flag>, $z0]},{<testers.A: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i3, i2, i1, r0.<testers.A: int result>, r3.<testers.B: int y>, i0, $i5, $i6, $i6, $i3, $i5]},{<testers.B: int y>->[r0.<testers.A: int result>, $i4, $i3, $i8, r0.<testers.A: int result>, $i7, i0, i0, i1, i0, r0.<testers.B: int y>, $i4, $i3, $i1, $i2, r0.<testers.A: int x>, $i2]},{<testers.B: boolean flag>->[$z0, z0, r0.<testers.A: boolean flag>, $z0]},{<testers.A: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Current Statement return
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: Statement typeclass soot.jimple.internal.JReturnVoidStmt
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: return here
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i3, i2, i1, r0.<testers.A: int result>, r3.<testers.B: int y>, i0, $i5, $i6, $i6, $i3, $i5]},{<testers.B: int y>->[r0.<testers.A: int result>, $i4, $i3, $i8, r0.<testers.A: int result>, $i7, i0, i0, i1, i0, r0.<testers.B: int y>, $i3, $i1, $i4, $i2, r0.<testers.A: int x>, $i2]},{<testers.B: boolean flag>->[$z0, z0, r0.<testers.A: boolean flag>, $z0]},{<testers.A: boolean flag>->[$z0]},
+Sep 10, 2012 2:14:27 AM dk.brics.soot.MyInterProcedureAnalysis flowThrough
+FINE: {<testers.A: int x>->[i3, i2, i1, r0.<testers.A: int result>, r3.<testers.B: int y>, i0, $i5, $i6, $i6, $i3, $i5]},{<testers.B: int y>->[r0.<testers.A: int result>, $i4, $i3, $i8, r0.<testers.A: int result>, $i7, i0, i0, i1, i0, r0.<testers.B: int y>, $i3, $i1, $i4, $i2, r0.<testers.A: int x>, $i2]},{<testers.B: boolean flag>->[$z0, z0, r0.<testers.A: boolean flag>, $z0]},{<testers.A: boolean flag>->[$z0]},
