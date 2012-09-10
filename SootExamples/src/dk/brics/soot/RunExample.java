@@ -9,17 +9,32 @@ import soot.jimple.VirtualInvokeExpr;
 import soot.jimple.internal.JVirtualInvokeExpr;
 import soot.toolkits.graph.*;
 import soot.toolkits.scalar.*;
+
+import java.io.IOException;
 import java.util.*;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 public class RunExample {
-	public static void main(String[] args) {
+	
+	public static void main(String[] args)  {
 		//argslist to setup the analysis environment
-		System.out.println("surresh test");
-		System.out.println("see changes in github");
+		/*logger.setLevel(Level.INFO);
+		FileHandler fileTxt = new FileHandler("AnalysisLog.txt");
+		SimpleFormatter formatterTxt = new SimpleFormatter();
+		fileTxt.setFormatter(formatterTxt);
+		logger.addHandler(fileTxt);
+		*/
+		
+		LoggerWrapper logWrap=LoggerWrapper.getInstance();
+		Logger logger=logWrap.getLogger();
+		logger.info((new Date()).toString());
 		args = new String[] { "testers.Integration", "testers.A", "testers.B" };
 		//validation check for empty arguments to the program
 		if (args.length == 0) {
-			System.out.println("Usage: java RunExample class_to_analyse");
+			logger.info("Usage: java RunExample class_to_analyse");
 			System.exit(0);
 		}
 		//extracting and loading the class to be analysed from the argument list

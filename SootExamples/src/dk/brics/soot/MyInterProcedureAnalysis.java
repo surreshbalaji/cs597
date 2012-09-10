@@ -1,39 +1,49 @@
 package dk.brics.soot;
 
-import java.beans.Statement;
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.logging.Logger;
 
-import soot.*;
+import soot.Body;
+import soot.SootField;
+import soot.SootMethod;
+import soot.Unit;
+import soot.Value;
+import soot.ValueBox;
 import soot.jimple.AssignStmt;
-import soot.jimple.DefinitionStmt;
 import soot.jimple.FieldRef;
-import soot.jimple.InvokeExpr;
+import soot.jimple.IdentityStmt;
 import soot.jimple.InvokeStmt;
-import soot.jimple.Ref;
-import soot.jimple.ReturnStmt;
+import soot.jimple.ParameterRef;
+import soot.jimple.ReturnVoidStmt;
 import soot.jimple.SpecialInvokeExpr;
 import soot.jimple.Stmt;
 import soot.jimple.internal.JVirtualInvokeExpr;
-import soot.options.Options;
-import soot.toolkits.graph.BriefUnitGraph;
 import soot.toolkits.graph.ExceptionalUnitGraph;
 import soot.toolkits.graph.UnitGraph;
-import soot.toolkits.scalar.ArraySparseSet;
 import soot.toolkits.scalar.FlowSet;
 import soot.toolkits.scalar.ForwardFlowAnalysis;
 import soot.toolkits.scalar.Pair;
 
-// Referenced classes of package soot.toolkits.scalar:
-//            BackwardFlowAnalysis, ArraySparseSet, FlowSet
-
 class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
-
+	/*private final static Logger logger = Logger
+			.getLogger(MyInterProcedureAnalysis.class.getName());
+*/
 	FlowSet emptySet = new DataFlowSet();
-	HashSet<Value> fieldRefVar = new HashSet<Value>();
+	DataFlowSet methodFlowSet = new DataFlowSet();
+	// HashSet<Value> fieldRefVar = new HashSet<Value>();
+	LoggerWrapper logWrap=LoggerWrapper.getInstance();
+	Logger logger=logWrap.getLogger();
+	
+	HashMap<Integer, HashSet<SootField>> paramTrackList = new HashMap<Integer, HashSet<SootField>>();
+
 	@SuppressWarnings("unchecked")
 	MyInterProcedureAnalysis(UnitGraph g) {
+
 		super(g);
-		System.out.println("Method name: " + g.getBody().getMethod().getName());
+		logger.fine("Method name: " + g.getBody().getMethod().getName());
 		/*
 		 * System.out.println("running livevariable analysis for the method");
 		 * lva = new LiveVariablesAnalysis(new
@@ -43,27 +53,25 @@ class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
 		doAnalysis();
 	}
 
-	public void doAnalysis(UnitGraph g) {
-		Iterator unitIt = graph.iterator();
-		while (unitIt.hasNext()) {
-			Unit s = (Unit) unitIt.next();
-			if (!ignoreStatement(s)) {
-				if (containsMethodInvocation(s)) { // If s contains an
-													// invocation to
-													// a method
-					SootMethod m = getInvokedMethodFromUnit(s); // Get the
-																// invoked
-																// method
-					MyInterProcedureAnalysis newAanalysis = new MyInterProcedureAnalysis(
-							new UnitGraph(m.retrieveActiveBody()) {
-							});
-				}
+	MyInterProcedureAnalysis(UnitGraph g,
+			HashMap<Integer, HashSet<SootField>> params) {
+		super(g);
+		this.paramTrackList = params;
+		doAnalysis();
 
-				analyseUnit(s);
-			}
-		}
 	}
 
+	/*
+	 * public void doAnalysis(UnitGraph g) { Iterator unitIt = graph.iterator();
+	 * while (unitIt.hasNext()) { Unit s = (Unit) unitIt.next(); if
+	 * (!ignoreStatement(s)) { if (containsMethodInvocation(s)) { // If s
+	 * contains an // invocation to // a method SootMethod m =
+	 * getInvokedMethodFromUnit(s); // Get the // invoked // method
+	 * MyInterProcedureAnalysis newAanalysis = new MyInterProcedureAnalysis( new
+	 * UnitGraph(m.getActiveBody()) { }); }
+	 * 
+	 * analyseUnit(s); } } }
+	 */
 	/*
 	 * Add conditions for ignoring statements from consideration for analysis
 	 */
@@ -125,8 +133,8 @@ class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
 			if (((AssignStmt) st).containsFieldRef()) {
 				// get live variables here
 				FieldRef fr = (FieldRef) ast.getFieldRef();
-				System.out.println(st);
-				System.out.println("Field referenced" + fr.getField());
+				logger.fine(st.toString());
+				logger.fine("Field referenced" + fr.getField());
 				List<ValueBox> vdb = st.getDefBoxes();
 				for (ValueBox vb : vdb) {
 					if (vb.getValue().equals(fr)) {
@@ -149,9 +157,11 @@ class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
 		}
 	}
 
-	public SootMethod getInvokedMethodFromUnit(Unit s) {
+	public SootMethod getInvokedMethodFromUnit(Unit s, FlowSet currentFlowSet) {
 		Stmt st = (Stmt) s;
+		DataFlowSet current = (DataFlowSet) currentFlowSet;
 		SootMethod sm = null;
+		paramTrackList.clear();
 		if (st instanceof AssignStmt) {
 			AssignStmt ast = (AssignStmt) st;
 
@@ -160,6 +170,13 @@ class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
 					JVirtualInvokeExpr expr = (JVirtualInvokeExpr) vb
 							.getValue();
 					sm = (SootMethod) expr.getMethod();
+					for (int i = 0; i < expr.getArgCount(); i++) {
+						HashSet<SootField> sf = current.updateTaintList(expr
+								.getArg(i));
+						if (sf.size() > 0) {
+							paramTrackList.put(i, sf);
+						}
+					}
 
 				}
 
@@ -175,7 +192,13 @@ class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
 					JVirtualInvokeExpr expr = (JVirtualInvokeExpr) invokeStmt
 							.getInvokeExpr();
 					sm = (SootMethod) expr.getMethod();
-
+					for (int i = 0; i < expr.getArgCount(); i++) {
+						HashSet<SootField> sf = current.updateTaintList(expr
+								.getArg(i));
+						if (sf.size() > 0) {
+							paramTrackList.put(i, sf);
+						}
+					}
 				}
 			}
 		}
@@ -206,57 +229,117 @@ class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
 		HashSet<Value> taintVar = new HashSet<Value>();
 		Pair<SootField, HashSet<Value>> taintMap = new Pair<SootField, HashSet<Value>>();
 		Stmt st = (Stmt) unit;
-		// System.out.println("Current Statement " + st);
-		// System.out.println("hello" +in.toString());
+		logger.fine("Current Statement " + st);
+		logger.fine("Statement type" + st.getClass());
 		// Copy out to in
+		
 		in.copy(out);
+
+		if (st instanceof IdentityStmt) {
+			IdentityStmt is = (IdentityStmt) st;
+			if (is.getRightOp() instanceof ParameterRef) {
+				ParameterRef pr = (ParameterRef) is.getRightOp();
+				logger.fine("Parameter reference" + is.getLeftOp());
+				if (paramTrackList.containsKey(pr.getIndex()))
+					;
+				{
+
+					Iterator boxIt = is.getDefBoxes().iterator();
+					while (boxIt.hasNext()) {
+						final ValueBox box = (ValueBox) boxIt.next();
+						Value value = box.getValue();
+
+						// if (value instanceof Local)
+						taintVar.add(value);
+
+						// remove taintlist for the Sootfield
+						// because redefinition happened
+						// out.removeValue(value);
+
+					}
+					logger.fine("Contains field params");
+					if (!paramTrackList.isEmpty()) {
+						if (paramTrackList.containsKey(pr.getIndex())) {
+							HashSet<SootField> sfSet = paramTrackList.get(pr
+									.getIndex());
+							for (SootField sf : sfSet) {
+
+								taintMap.setPair(sf, taintVar);
+								// fieldRefVar.addAll(taintVar);
+								out.add(taintMap);
+							}
+						}
+					}
+				}
+
+			}
+		}
+		// invocation of method and do analysis on the method
+		if (containsMethodInvocation(st)) {
+			logger.fine("Method invocation");
+			SootMethod m = getInvokedMethodFromUnit(st, out);
+			Body b = m.retrieveActiveBody();
+			UnitGraph graph = new ExceptionalUnitGraph(b);
+			logger.fine("caller out flowset :" + out);
+			MyInterProcedureAnalysis newAnalysis = new MyInterProcedureAnalysis(
+					graph, this.paramTrackList);
+			// newAnalysis.setParamTrackList(this.paramTrackList);
+			logger.fine("method flowset :" + newAnalysis.getMethodFlowSet());
+			logger.fine("out flowset :" + out);
+			out.union(newAnalysis.getMethodFlowSet(), out);
+			logger.fine("After union : " + out.toString());
+		}
 		// consider only the assignment statement
+
 		if (st instanceof AssignStmt) {
 			AssignStmt ast = (AssignStmt) st;
-			// checking whether the assignment statement contains fieldref
-
+			// get the defboxes
 			Iterator boxIt = st.getDefBoxes().iterator();
 			while (boxIt.hasNext()) {
 				final ValueBox box = (ValueBox) boxIt.next();
 				Value value = box.getValue();
 
-				if (value instanceof Local)
-					taintVar.add(value);
-			}
+				// if (value instanceof Local)
+				taintVar.add(value);
 
+				// remove taintlist for the Sootfield
+				// because redefinition happened
+				// out.removeValue(value);
+
+			}
+			// get the useboxes and check whether it has fieldref
 			boxIt = st.getUseBoxes().iterator();
 			while (boxIt.hasNext()) {
 				final ValueBox box = (ValueBox) boxIt.next();
 				Value value = box.getValue();
 				// field ref
 				if (ast.containsFieldRef()) {
-					// get live variables here
+					// check for fieldref
 					FieldRef fr = (FieldRef) ast.getFieldRef();
 
 					if (value.equals(fr)) {
 						// System.out.println(st);
-						// System.out.println("Field referenced" +
-						// fr.getField());
+						logger.fine("Field referenced" + fr.getField());
 						taintMap.setPair(fr.getField(), taintVar);
-						fieldRefVar.addAll(taintVar);
+						// fieldRefVar.addAll(taintVar);
 						out.add(taintMap);
 
 					}
 				}
 				// fields referenced via temp var
-				System.out.println(value);
+				logger.fine(value.toString());
 				if (out.contains(value)) {
 
-					System.out.println("indirect reference");
+					logger.fine("indirect reference");
 					HashSet<SootField> sf = out.updateTaintList(value);
 					for (SootField s : sf) {
 						HashSet<Value> currentList = out.getVars(s);
 						// remove this variable
-					if(fieldRefVar.contains(value))
-						{
-							System.out.println("removed");
-						currentList.remove(value);
-						}
+						/*
+						 * if(fieldRefVar.contains(value)) {
+						 * System.out.println("removed");
+						 * currentList.remove(value); }
+						 */
 						// add the new tainted variable
 						currentList.addAll(taintVar);
 						taintMap.setPair(s, currentList);
@@ -265,6 +348,12 @@ class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
 				}
 
 			}
+
+		}
+		if (st instanceof ReturnVoidStmt) {
+			logger.fine("return here");
+			out.copy(methodFlowSet);
+			logger.fine(out.toString());
 		}
 
 	}
@@ -282,5 +371,13 @@ class MyInterProcedureAnalysis extends ForwardFlowAnalysis {
 		DataFlowSet sourceSet = (DataFlowSet) source, destSet = (DataFlowSet) dest;
 
 		sourceSet.copy(destSet);
+	}
+
+	public DataFlowSet getMethodFlowSet() {
+		return methodFlowSet;
+	}
+
+	public void setParamTrackList(HashMap<Integer, HashSet<SootField>> params) {
+		this.paramTrackList = params;
 	}
 }

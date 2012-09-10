@@ -1,7 +1,9 @@
 package dk.brics.soot;
 
+import java.io.IOException;
 import java.io.PrintStream;
 import java.util.*;
+import java.util.logging.Logger;
 
 import soot.*;
 import soot.jimple.Stmt;
@@ -18,13 +20,10 @@ public class MyInterProcedure
 {
 
 	public MyInterProcedure(UnitGraph graph) {
-		if (Options.v().time())
-			Timers.v().liveTimer.start();
-		if (Options.v().verbose())
-			G.v().out.println((new StringBuilder()).append("[")
-					.append(graph.getBody().getMethod().getName())
-					.append("]     Constructing SimpleLiveLocals...")
-					.toString());
+		LoggerWrapper logWrap=LoggerWrapper.getInstance();
+		Logger logger=logWrap.getLogger();
+		
+		logger.fine("Starting interprocedure analysis");
 		MyInterProcedureAnalysis analysis = new MyInterProcedureAnalysis(graph);
 		Iterator sIt = graph.getBody().getUnits().iterator();
 		while (sIt.hasNext()) {

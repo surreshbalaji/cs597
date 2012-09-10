@@ -74,8 +74,8 @@ public class DataFlowSet extends AbstractFlowSet {
 		// TODO Auto-generated method stub
 		if (obj instanceof Value) {
 			for (SootField s : cntrlTaintFlow.keySet()) {
-				if(cntrlTaintFlow.get(s).contains(obj))
-				 return true;
+				if (cntrlTaintFlow.get(s).contains(obj))
+					return true;
 			}
 
 		} else if (obj instanceof Pair) {
@@ -109,14 +109,13 @@ public class DataFlowSet extends AbstractFlowSet {
 				e.printStackTrace();
 			}
 	}
-	
-	public void removeValue(Value val)
-	{
-		
-		for (SootField s : cntrlTaintFlow.keySet())
-		{
+
+	public void removeValue(Value val) {
+		if (val instanceof SootField) {
 			
-		}
+				cntrlTaintFlow.remove((SootField) val);
+			}
+		
 	}
 
 	@Override
@@ -183,19 +182,16 @@ public class DataFlowSet extends AbstractFlowSet {
 		}
 		return vars;
 	}
-	
-	public HashSet<Value> getVars(SootField sf)
-	{
+
+	public HashSet<Value> getVars(SootField sf) {
 		return cntrlTaintFlow.get(sf);
 	}
-	
-	public HashSet<SootField> updateTaintList(Value value)
-	{
-		HashSet<SootField> sf=new HashSet<SootField>();
+
+	public HashSet<SootField> updateTaintList(Value value) {
+		HashSet<SootField> sf = new HashSet<SootField>();
 		for (SootField s : cntrlTaintFlow.keySet()) {
-			if(cntrlTaintFlow.get(s).contains(value))
-			{
-				//add the field;
+			if (cntrlTaintFlow.get(s).contains(value)) {
+				// add the field;
 				sf.add(s);
 			}
 		}
@@ -207,49 +203,36 @@ public class DataFlowSet extends AbstractFlowSet {
 		this.cntrlTaintFlow = cntrlTaintFlow;
 	}
 
-	public void union(FlowSet flowset, FlowSet dest)
-	{
-		DataFlowSet result=new DataFlowSet();
-		DataFlowSet in1=(DataFlowSet) flowset;
-		if(cntrlTaintFlow.isEmpty() && in1.cntrlTaintFlow.isEmpty())
-		{
-		  result.copy(dest);
-		}
-		else if(cntrlTaintFlow.isEmpty())
-		{
+	public void union(FlowSet flowset, FlowSet dest) {
+		DataFlowSet result = new DataFlowSet();
+		DataFlowSet in1 = (DataFlowSet) flowset;
+		if (cntrlTaintFlow.isEmpty() && in1.cntrlTaintFlow.isEmpty()) {
+			result.copy(dest);
+		} else if (cntrlTaintFlow.isEmpty()) {
 			in1.copy(dest);
-		}
-		else if(in1.cntrlTaintFlow.isEmpty())
-		{
+		} else if (in1.cntrlTaintFlow.isEmpty()) {
 			this.copy(dest);
-		}
-		else
-		{
-			//both flowsets has somethings to do a union operation
+		} else {
+			// both flowsets has somethings to do a union operation
 			this.copy(result);
-			for(SootField s: in1.cntrlTaintFlow.keySet())
-			{
-				if(result.cntrlTaintFlow.containsKey(s))
-				{
-				HashSet<Value> in1varset=in1.cntrlTaintFlow.get(s);
-				HashSet<Value> resvarset=result.cntrlTaintFlow.get(s);
-				resvarset.addAll(in1varset);
-				result.cntrlTaintFlow.put(s,resvarset);
-			    }
-				else
-				{
-					HashSet<Value> in1varset=in1.cntrlTaintFlow.get(s);
-					if(!in1varset.isEmpty())
-					{
-	
-						result.cntrlTaintFlow.put(s,in1varset);
+			for (SootField s : in1.cntrlTaintFlow.keySet()) {
+				if (result.cntrlTaintFlow.containsKey(s)) {
+					HashSet<Value> in1varset = in1.cntrlTaintFlow.get(s);
+					HashSet<Value> resvarset = result.cntrlTaintFlow.get(s);
+					resvarset.addAll(in1varset);
+					result.cntrlTaintFlow.put(s, resvarset);
+				} else {
+					HashSet<Value> in1varset = in1.cntrlTaintFlow.get(s);
+					if (!in1varset.isEmpty()) {
+
+						result.cntrlTaintFlow.put(s, in1varset);
 					}
-				}	
-					
+				}
+
 			}
 		}
-		dest.copy(result);
-			
+		result.copy(dest);
+
 	}
 
 	public void copy(FlowSet dest) {
@@ -259,7 +242,7 @@ public class DataFlowSet extends AbstractFlowSet {
 				HashSet<Value> varset = new HashSet<Value>();
 				varset.addAll(cntrlTaintFlow.get(s));
 				result.cntrlTaintFlow.put(s, varset);
-				
+
 			}
 		} else
 			dest = new DataFlowSet();

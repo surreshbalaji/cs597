@@ -21,7 +21,7 @@ public class A {
 		return result;
 	}
 
-	public void setSumOp(boolean f) {
+	public void setSumOp(boolean f,int e,float g) {
 		flag = f;
 		int a,b,c;
 		a=x+5;
